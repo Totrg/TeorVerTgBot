@@ -11,16 +11,16 @@ def CombinatoricsPermutationsEasy():
     rand1 = r.randint(0, len(names_set) - 1)
     rand2 = r.randint(0, len(names_set) - 1)
     count = r.randint(3, 8)
-    word = "разных"
+    word = "разных игрушек"
     if count <= 4:
-        word = "разные"
+        word = "разные игрушки"
     else:
-        word = "разных"
+        word = "разных игрушек"
     while rand1 == rand2:
         rand2 = r.randint(0, len(names_set) - 1)
     problemtmp = names_set[rand1] + " и " + names_set[
         rand2] + " играют в игру. " + str(
-        count) + f" {word} игрушек стоят в ряд. Игроку за один ход нужно за ограниченное время переставить игрушки местами так, чтобы их порядок не повторялся. Сколько максимально уникальных перестановок сможет сделать игрок?"
+        count) + f" {word} стоят в ряд. Игроку за один ход нужно за ограниченное время переставить игрушки местами так, чтобы их порядок не повторялся. Сколько максимально уникальных перестановок сможет сделать игрок?"
     answertmp = m.factorial(count)
     solvingtmp = "Применим формулу числа перестановок n объектов:\nP = n!\nP = " + str(count) + "! = " + str(
         answertmp) + "\nОтвет: " + str(answertmp)
